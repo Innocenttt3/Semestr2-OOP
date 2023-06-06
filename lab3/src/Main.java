@@ -21,5 +21,7 @@ public class Main {
         StrokeShapeDecorator example3 = new StrokeShapeDecorator(poly, "black", 10);
         SolidFillShapeDecorator polyDecorator = new SolidFillShapeDecorator(poly, "#000000");
         SolidFillShapeDecorator ellipseDecorator = new SolidFillShapeDecorator(elip, "#FFFFFF");
+
+
     }
 }
