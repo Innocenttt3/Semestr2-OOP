@@ -9,8 +9,11 @@ import java.util.stream.Stream;
 
 public class FileCommander {
     private Path directoryPath;
-
     public int counter = 0;
+
+    public Path getDirectoryPath() {
+        return directoryPath;
+    }
 
     public FileCommander() {
         this.directoryPath = Paths.get(System.getProperty("user.home"));
@@ -20,11 +23,14 @@ public class FileCommander {
         return directoryPath.toString();
     }
 
-    public void cd(String givenPath) {
-        Path newPath = directoryPath.resolve(givenPath);
-        directoryPath = newPath.normalize();
+    public void cd(String path) {
+        Path newPath = directoryPath.resolve(path);
+        if (Files.isDirectory(newPath)) {
+            directoryPath = newPath;
+        } else {
+            System.out.println("Podana ścieżka nie jest katalogiem.");
+        }
     }
-
     public List<String> ls(String path) {
         int index = 0;
         File folder = new File(path);
@@ -53,6 +59,21 @@ public class FileCommander {
 
             }
         return fileList;
+    }
+
+    public List<String> findBySubString(String subString) {
+        File folder = new File(directoryPath.toString());
+        File[] files = folder.listFiles();
+        List<String> fileHasSubString = new ArrayList<>();
+        if (files != null) {
+            for (File file : files) {
+                String tmp = file.getName().toString();
+               if(tmp.contains("iterm")) {
+                   fileHasSubString.add(directoryPath.toString() + "/" + file.getName().toString());
+               }
+            }
+        }
+        return fileHasSubString;
     }
 }
 
