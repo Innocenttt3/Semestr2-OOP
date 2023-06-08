@@ -4,14 +4,24 @@ import java.io.FileReader;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Person implements Serializable {
     private String name;
     private LocalDate birth, death;
     private Person parents[] = new Person[2];
+
+    public static class AmbigiousCollector {
+        public String nameCollector;
+        public String pathCollector;
+
+        public AmbigiousCollector(String nameCollector, String pathCollector) {
+            this.nameCollector = nameCollector;
+            this.pathCollector = pathCollector;
+        }
+
+
+    }
 
     public Person(String name, LocalDate birth) {
         this(name, birth, null);
@@ -25,7 +35,8 @@ public class Person implements Serializable {
             if (birth.isAfter(death)) {
                 throw new NegativeLifespanException(birth, death, "Possible time-space loophole.");
             }
-        } catch (NullPointerException e) {}
+        } catch (NullPointerException e) {
+        }
     }
 
     public Person(String name, LocalDate birth, LocalDate death, Person parent1, Person parent2) throws IncestException {
@@ -51,9 +62,9 @@ public class Person implements Serializable {
     }
 
     void checkForIncest() throws IncestException {
-        if(parents[0] == null || parents[1] == null)
+        if (parents[0] == null || parents[1] == null)
             return;
-        for(var leftSideParent : parents[0].parents) {
+        for (var leftSideParent : parents[0].parents) {
             if (leftSideParent == null) continue;
             for (var rightSideParent : parents[1].parents) {
                 if (rightSideParent == null) continue;
@@ -62,19 +73,44 @@ public class Person implements Serializable {
             }
         }
     }
-    public static Person creatPerson(String path) throws FileNotFoundException {
+
+    private static List<AmbigiousCollector> names = new ArrayList<>();
+
+    private static boolean isAmbigious(String name, String path) {
+        AmbigiousCollector test = new AmbigiousCollector("xyz", "xyz");
+        names.add(test);
+        for (AmbigiousCollector collector : names) {
+            if (collector.nameCollector.equals(name)) {
+                return true;
+            }
+        }
+        AmbigiousCollector tmp = new AmbigiousCollector(name, path);
+        names.add(tmp);
+        return false;
+    }
+
+
+    public static Person createPerson(String path) throws FileNotFoundException, AmbigiousPersonException {
         File file = new File(path);
         Scanner scanner = null;
-        try { scanner = new Scanner(file);
+        try {
+            scanner = new Scanner(file);
+        } catch (Exception exception) {
+            System.out.println("error otwierania pliku");
         }
-        catch (Exception exception) { System.out.println("error otwierania pliku"); }
         String name = scanner.nextLine();
         String tmpBirth = scanner.nextLine();
         LocalDate birthDate = LocalDate.parse(tmpBirth, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        if(scanner.hasNextLine()){
+        if (isAmbigious(name, path)) {
+            System.out.println("moj stary nie wrocil");
+            throw new AmbigiousPersonException(name, path);
+        }
+        if (scanner.hasNextLine()) {
             String tmpDeath = scanner.nextLine();
             LocalDate deathDate = LocalDate.parse(tmpDeath, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
             return new Person(name, birthDate, deathDate);
-            } else { return new Person(name, birthDate); }
+        } else {
+            return new Person(name, birthDate);
+        }
     }
 }

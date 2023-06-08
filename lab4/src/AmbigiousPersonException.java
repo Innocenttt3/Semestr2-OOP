@@ -1,16 +1,5 @@
-class AmbiguousPersonException extends Exception {
-    private String personName;
-
-    public AmbiguousPersonException(String personName) {
-        this.personName = personName;
-    }
-
-    public String getPersonName() {
-        return personName;
-    }
-
-    @Override
-    public String getMessage() {
-        return "AmbiguousPersonException: Multiple persons found with the name " + personName;
+public class AmbigiousPersonException extends Exception {
+    public AmbigiousPersonException(String name, String path) {
+        super("Multiple persons with name: " + name + "from path:" + path);
     }
 }
