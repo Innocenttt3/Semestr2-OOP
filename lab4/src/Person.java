@@ -77,8 +77,6 @@ public class Person implements Serializable {
     private static List<AmbigiousCollector> names = new ArrayList<>();
 
     private static boolean isAmbigious(String name, String path) {
-        AmbigiousCollector test = new AmbigiousCollector("xyz", "xyz");
-        names.add(test);
         for (AmbigiousCollector collector : names) {
             if (collector.nameCollector.equals(name)) {
                 return true;
@@ -102,7 +100,6 @@ public class Person implements Serializable {
         String tmpBirth = scanner.nextLine();
         LocalDate birthDate = LocalDate.parse(tmpBirth, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         if (isAmbigious(name, path)) {
-            System.out.println("moj stary nie wrocil");
             throw new AmbigiousPersonException(name, path);
         }
         if (scanner.hasNextLine()) {
