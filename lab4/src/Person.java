@@ -11,6 +11,14 @@ public class Person implements Serializable {
     private LocalDate birth, death;
     private Person parents[] = new Person[2];
 
+    public Person getParent1() {
+        return parents[0];
+    }
+
+    public Person getParent2() {
+        return parents[1];
+    }
+
     public static class AmbigiousCollector {
         public String nameCollector;
         public String pathCollector;
@@ -87,7 +95,6 @@ public class Person implements Serializable {
         return false;
     }
 
-
     public static Person createPerson(String path) throws FileNotFoundException, AmbigiousPersonException, IncestException {
         File file = new File(path);
         Scanner scanner = null;
@@ -107,7 +114,7 @@ public class Person implements Serializable {
             if (decisive.equals("Rodzice:")) {
                 String parentName = scanner.nextLine();
                 Person parent1 = new Person(parentName, null);
-                if(scanner.hasNextLine()){
+                if (scanner.hasNextLine()) {
                     String parentTwoName = scanner.nextLine();
                     Person parent2 = new Person(parentTwoName, null);
                     return new Person(name, birthDate, parent1, parent2);
@@ -121,7 +128,7 @@ public class Person implements Serializable {
                     String trash = scanner.nextLine();
                     String parentName = scanner.nextLine();
                     Person parent1 = new Person(parentName, null);
-                    if(scanner.hasNextLine()){
+                    if (scanner.hasNextLine()) {
                         String parentTwoName = scanner.nextLine();
                         Person parent2 = new Person(parentTwoName, null);
                         return new Person(name, birthDate, deathDate, parent1, parent2);
@@ -136,14 +143,18 @@ public class Person implements Serializable {
         return new Person(name, birthDate);
     }
 
-//        public List<String> findRelatives (String path){
-//            List<String> relatives = new ArrayList<>();
-//            List<String> listOfFiles = new ArrayList<>();
-//            List<String> listOfPeople = new ArrayList<>();
-//            listOfFiles = FilesLoader.readFilesFromPath(path);
-//
-//
-//            return relatives;
-//        }
-
+    public static List<Person> findRelatives(List<Person> groupOfPeople) {
+        List<Person> relatives = new ArrayList<>();
+        for (Person tmp1 : groupOfPeople) {
+            for (Person tmp2 : groupOfPeople) {
+                if(tmp1.parents[0] != null){
+                    if(tmp1.parents[0] == tmp2.parents[0]){
+                        relatives.add(tmp1);
+                    }
+                }
+            }
+        }
+        return relatives;
     }
+
+}
