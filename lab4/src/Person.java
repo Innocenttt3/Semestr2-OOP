@@ -88,7 +88,7 @@ public class Person implements Serializable {
     }
 
 
-    public static Person createPerson(String path) throws FileNotFoundException, AmbigiousPersonException {
+    public static Person createPerson(String path) throws FileNotFoundException, AmbigiousPersonException, IncestException {
         File file = new File(path);
         Scanner scanner = null;
         try {
@@ -103,11 +103,47 @@ public class Person implements Serializable {
             throw new AmbigiousPersonException(name, path);
         }
         if (scanner.hasNextLine()) {
-            String tmpDeath = scanner.nextLine();
-            LocalDate deathDate = LocalDate.parse(tmpDeath, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-            return new Person(name, birthDate, deathDate);
-        } else {
-            return new Person(name, birthDate);
+            String decisive = scanner.nextLine();
+            if (decisive.equals("Rodzice:")) {
+                String parentName = scanner.nextLine();
+                Person parent1 = new Person(parentName, null);
+                if(scanner.hasNextLine()){
+                    String parentTwoName = scanner.nextLine();
+                    Person parent2 = new Person(parentTwoName, null);
+                    return new Person(name, birthDate, parent1, parent2);
+                } else {
+                    return new Person(name, birthDate, parent1, null);
+                }
+            } else {
+                String tmpDeath = decisive;
+                LocalDate deathDate = LocalDate.parse(tmpDeath, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+                if (scanner.hasNextLine()) {
+                    String trash = scanner.nextLine();
+                    String parentName = scanner.nextLine();
+                    Person parent1 = new Person(parentName, null);
+                    if(scanner.hasNextLine()){
+                        String parentTwoName = scanner.nextLine();
+                        Person parent2 = new Person(parentTwoName, null);
+                        return new Person(name, birthDate, deathDate, parent1, parent2);
+                    } else {
+                        return new Person(name, birthDate, deathDate, parent1, null);
+                    }
+
+                }
+
+            }
         }
+        return new Person(name, birthDate);
     }
-}
+
+//        public List<String> findRelatives (String path){
+//            List<String> relatives = new ArrayList<>();
+//            List<String> listOfFiles = new ArrayList<>();
+//            List<String> listOfPeople = new ArrayList<>();
+//            listOfFiles = FilesLoader.readFilesFromPath(path);
+//
+//
+//            return relatives;
+//        }
+
+    }
