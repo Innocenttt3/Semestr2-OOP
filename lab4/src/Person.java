@@ -2,12 +2,18 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Serializable;
+import java.security.PrivilegedExceptionAction;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Person implements Serializable {
     private String name;
+
+    public String getName() {
+        return name;
+    }
+
     private LocalDate birth, death;
     private Person parents[] = new Person[2];
 
@@ -17,6 +23,18 @@ public class Person implements Serializable {
 
     public Person getParent2() {
         return parents[1];
+    }
+
+    public static class Family {
+        public Person child;
+        public Person parent1;
+        public Person parent2;
+
+        public Family(Person child, Person parent1, Person parent2) {
+            this.child = child;
+            this.parent1 = parent1;
+            this.parent2 = parent2;
+        }
     }
 
     public static class AmbigiousCollector {
@@ -84,6 +102,19 @@ public class Person implements Serializable {
 
     private static List<AmbigiousCollector> names = new ArrayList<>();
 
+
+    public static List<Person> generatingParentsList(List<Person> lisOfPeople) throws AmbigiousPersonException {
+
+        List<Person> parents = new ArrayList<>();
+        List<String> parentsName = new ArrayList<>();
+        Person sloop = new Person("Jan Kowalski", null);
+        parents.add(sloop);
+        for(Person tmpPerson: parents){
+            parentsName.add(tmpPerson.getName());
+        }
+        return parents;
+    }
+
     private static boolean isAmbigious(String name, String path) {
         for (AmbigiousCollector collector : names) {
             if (collector.nameCollector.equals(name)) {
@@ -147,8 +178,8 @@ public class Person implements Serializable {
         List<Person> relatives = new ArrayList<>();
         for (Person tmp1 : groupOfPeople) {
             for (Person tmp2 : groupOfPeople) {
-                if(tmp1.parents[0] != null){
-                    if(tmp1.parents[0] == tmp2.parents[0]){
+                if (tmp1.parents[0] != null) {
+                    if (tmp1.parents[0] == tmp2.parents[0]) {
                         relatives.add(tmp1);
                     }
                 }

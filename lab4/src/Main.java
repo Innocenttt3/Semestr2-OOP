@@ -14,13 +14,12 @@ public class Main {
         List<String> listOfFile = FilesLoader.readFilesFromPath("/Users/kamilgolawski/Nauka/Programowanie/Semestr2-OOP/lab4/test/test_rodzice");
         Collections.sort(listOfFile);
         List<Person> listOfPeople = new ArrayList<>();
-        List<Person> listOfPeopleWithAtLeastOneParent = new ArrayList<>();
         for (String tmp : listOfFile) {
             listOfPeople.add(Person.createPerson(tmp));
         }
 
-        List<Person> relatives = Person.findRelatives(listOfPeople);
-        for (Person tmp2 : relatives) {
+        List<Person> parents = Person.generatingParentsList(listOfPeople);
+        for (Person tmp2 : parents) {
             System.out.println(tmp2.toString());
         }
 
