@@ -31,7 +31,6 @@ public class ClientThread extends Thread {
                     case "BR" -> server.broadcast(this,postfix);
                     case "WH" -> server.whisper(this,postfix);
                     case "ON" -> server.online(this);
-                    case "FI" -> server.sendFile(this,postfix);
                 }
 
                 System.out.println(message);
@@ -54,7 +53,7 @@ public class ClientThread extends Thread {
 
     public void login(String name) {
         clientName = name;
-        server.online(this);
+//        server.online(this);
         server.broadcastLogin(this);
     }
 

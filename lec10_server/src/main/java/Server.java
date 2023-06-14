@@ -20,8 +20,8 @@ public class Server {
         }
     }
 
-    public void listen(){
-        while(true){
+    public void listen() {
+        while (true) {
             Socket clientSocket;
             try {
                 clientSocket = serverSocket.accept();
@@ -40,22 +40,22 @@ public class Server {
         broadcastLogout(client);
     }
 
-    public void broadcast(ClientThread sender, String message){
-        for(var currentClient : clients)
-            currentClient.send("BR"+sender.getClientName()+" "+message);
+    public void broadcast(ClientThread sender, String message) {
+        for (var currentClient : clients)
+            currentClient.send("BR" + sender.getClientName() + " " + message);
 
     }
 
     public void broadcastLogin(ClientThread client) {
-        for(var currentClient : clients)
-            if(currentClient != client)
-                currentClient.send("LN"+client.getClientName());
+        for (var currentClient : clients)
+            if (currentClient != client)
+                currentClient.send("LN" + client.getClientName());
 
     }
 
     public void broadcastLogout(ClientThread client) {
-        for(var currentClient : clients)
-            currentClient.send("LT"+client.getClientName());
+        for (var currentClient : clients)
+            currentClient.send("LT" + client.getClientName());
     }
 
     private Optional<ClientThread> getClient(String clientName) {
@@ -69,45 +69,15 @@ public class Server {
         String recipientName = messageArr[0];
 
         Optional<ClientThread> recipient = getClient(recipientName);
-        if(recipient.isPresent()) {
-            recipient.get().send("WH"+sender.getClientName()+" "+messageArr[1]);
-        }
-        else sender.send("NU"+recipientName);
+        if (recipient.isPresent()) {
+            recipient.get().send("WH" + sender.getClientName() + " " + messageArr[1]);
+        } else sender.send("NU" + recipientName);
     }
 
     public void online(ClientThread sender) {
         String listString = clients.stream()
                 .map(ClientThread::getClientName)
                 .collect(Collectors.joining(" "));
-        sender.send("ON"+listString);
-    }
-
-    public void sendFile(ClientThread sender, String message) throws IOException {
-        String[] messageArr = message.split(" ");
-        String recipientName = messageArr[0];
-        long fileSize = Long.parseLong(messageArr[1]);
-        String fileName = messageArr[2];
-
-        Optional<ClientThread> recipient = getClient(recipientName);
-
-        if(recipient.isPresent()) {
-            DataInputStream fileIn = new DataInputStream(sender.getSocket().getInputStream());
-            DataOutputStream fileOut = new DataOutputStream(recipient.get().getSocket().getOutputStream());
-
-            byte[] buffer = new byte[64];
-            long receivedSize = 0;
-            int count;
-
-            recipient.get().send("FI"+sender.getClientName()+" "+fileSize+" "+fileName);
-            while (receivedSize < fileSize) {
-                count = fileIn.read(buffer);
-                receivedSize += count;
-                System.out.println(receivedSize+" "+(fileSize-receivedSize));
-                fileOut.write(buffer, 0, count);
-            }
-        }
-
-        else sender.send("NU"+recipientName);
-
+        sender.send("ON" + listString);
     }
 }

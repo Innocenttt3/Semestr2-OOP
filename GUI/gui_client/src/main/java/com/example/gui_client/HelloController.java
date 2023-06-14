@@ -5,6 +5,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import pl.umcs.oop.client.ServerThread;
 
+import java.util.List;
+
 public class HelloController {
 
     private ServerThread serverThread;
@@ -17,11 +19,9 @@ public class HelloController {
     }
 
     public Button sendButton;
-    public Button sendFileButton;
     public TextArea outputArea;
     public TextField inputFiled;
     public ListView clientList;
-    public ProgressBar fileProgressBar;
     public GridPane mainPage;
 
     public void send(){
@@ -29,7 +29,25 @@ public class HelloController {
         serverThread.broadcast(text);
         inputFiled.clear();
 ;    }
-    public void showBroadcast(String sender, String message){
-        outputArea.appendText("\n" + sender + ":" + message);
+    public void showBroadcast(String sender, String message) {
+        outputArea.appendText("\n" + sender+message);
     }
+    public void addToClients(String clientName) {
+        clientList.getItems().add(clientName);
+    }
+
+    public void removeFromClients(String clientName) {
+        clientList.getItems().remove(clientName);
+    }
+
+    public void populationOnlineList(List<String> userNames) {
+        clientList.getItems().clear();
+        userNames.stream()
+                .forEach(name -> clientList.getItems().add(name));
+    }
+    public void initialize() {
+        serverThread.online();
+    }
+
+
 }

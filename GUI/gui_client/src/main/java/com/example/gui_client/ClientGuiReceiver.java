@@ -1,17 +1,20 @@
 package com.example.gui_client;
 
+import javafx.application.Platform;
 import pl.umcs.oop.client.ClientReceiver;
 
+import java.util.Arrays;
+
 public class ClientGuiReceiver implements ClientReceiver {
-    HelloController controller= null;
+    HelloController controller = null;
 
     public void setController(HelloController controller) {
         this.controller = controller;
     }
 
     @Override
-    public void receiveBroadcast(String s, String s1) {
-        controller.showBroadcast(s , s1);
+    public void receiveBroadcast(String sender, String message) {
+        Platform.runLater(() -> controller.showBroadcast(sender , message));
     }
 
     @Override
@@ -26,17 +29,17 @@ public class ClientGuiReceiver implements ClientReceiver {
 
     @Override
     public void receiveLoginBroadcast(String s) {
-
+        Platform.runLater(() -> controller.addToClients(s));
     }
 
     @Override
     public void receiveLogoutBroadcast(String s) {
-
+        Platform.runLater(() ->controller.removeFromClients(s));
     }
 
     @Override
     public void receiveOnline(String[] strings) {
-
+        Platform.runLater(() ->controller.populationOnlineList(Arrays.stream(strings).toList()));
     }
 
     @Override

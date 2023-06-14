@@ -14,7 +14,8 @@ import pl.umcs.oop.client.*;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        ServerThread serverThread = new ServerThread("localhost", 5000);
+        ServerThread serverThread = new ServerThread("localhost", 1234);
+        serverThread.setDaemon(true);
         serverThread.start();
         ClientGuiReceiver receiver = new ClientGuiReceiver();
         serverThread.setReceiver(receiver);
@@ -36,7 +37,7 @@ public class HelloApplication extends Application {
         }
 
         Scene scene = new Scene(fxmlLoader.load(), 800, 450);
-        stage.setTitle("Hello!");
+        stage.setTitle("Chat Window");
         stage.setScene(scene);
         stage.show();
     }
