@@ -1,5 +1,9 @@
 public class Polygon {
-    private Point[] arrayOfPoints;
+    protected Point[] arrayOfPoints;
+
+    public Point[] getArrayOfPoints() {
+        return arrayOfPoints;
+    }
 
     public Polygon(Point[] arrayOfPoints) {
         this.arrayOfPoints = arrayOfPoints;
@@ -55,7 +59,6 @@ public class Polygon {
                 counter++;
             }
         }
-        System.out.println(counter);
-        return counter % 2 == 0;
+        return counter % 2 != 0;
     }
 }
