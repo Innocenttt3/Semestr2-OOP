@@ -1,43 +1,61 @@
 public class Polygon {
     private Point[] arrayOfPoints;
+
     public Polygon(Point[] arrayOfPoints) {
         this.arrayOfPoints = arrayOfPoints;
     }
-    public boolean isInside(Point point)  {
-        double d = 0;
-        double b = 0;
-        double x = 0;
-        double a = 0;
-        int counter = 0;
-        int amountOfPoints = 0;
-        for (Point tmpPoint: arrayOfPoints) {
-            amountOfPoints++;
-        }
-       for (int i = 0; i < amountOfPoints - 1; i++) {
-           double pay = arrayOfPoints[i].y;
-           double pby = arrayOfPoints[i + 1].y;
-           double pax = arrayOfPoints[i].y;
-           double pbx = arrayOfPoints[i + 1].y;
 
-           if(pay > pby) {
-               double tmpValueYa = pay;
-               pay = pby;
-               pby = tmpValueYa;
-           }
-           if (pay < point.y  && point.y < pby){
-               d = pbx - pax;
-               if (d == 0) {
-                   x = pax;
-               } else {
-                   a = (pby - pay) / d;
-                   b = (pay - a * pax);
-                   x = (point.y - b) / a;
-                   if (x < point.x) {
-                       counter++;
-                   }
-               }
-           }
-       }
-        return counter % 2 != 0;
+    public boolean isInside(Point point) {
+        int counter = 0;
+        double x = 0;
+        double d = 0;
+        double a = 0;
+        double b = 0;
+        for (int i = 0; i < arrayOfPoints.length - 1; i++) {
+
+            Point pa = arrayOfPoints[i];
+            Point pb = arrayOfPoints[i + 1];
+            if (pa.y > pb.y) {
+                Point tmpPoint = pa;
+                pa = pb;
+                pb = tmpPoint;
+            }
+            if (pa.y < point.y && point.y < pb.y) {
+                d = pb.x - pa.x;
+                if (d == 0) {
+                    x = pa.x;
+                } else {
+                    a = (pb.y - pa.y) / d;
+                    b = pa.y - a * pa.x;
+                    x = (point.y - b) / a;
+                }
+                if (x < point.x) {
+                    counter++;
+                }
+            }
+
+        }
+        Point pa = arrayOfPoints[arrayOfPoints.length - 1];
+        Point pb = arrayOfPoints[0];
+        if (pa.y > pb.y) {
+            Point tmpPoint = pa;
+            pa = pb;
+            pb = tmpPoint;
+        }
+        if (pa.y < point.y && point.y < pb.y) {
+            d = pb.x - pa.x;
+            if (d == 0) {
+                x = pa.x;
+            } else {
+                a = (pb.y - pa.y) / d;
+                b = pa.y - a * pa.x;
+                x = (point.y - b) / a;
+            }
+            if (x < point.x) {
+                counter++;
+            }
+        }
+        System.out.println(counter);
+        return counter % 2 == 0;
     }
 }
