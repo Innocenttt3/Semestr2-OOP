@@ -48,6 +48,7 @@ public class Main {
         for (Resource tmpresource: lublinResources) {
             System.out.print(tmpresource.whatResource + " ");
             System.out.println(tmpresource.centerOnMap);
+
         }
     }
 }

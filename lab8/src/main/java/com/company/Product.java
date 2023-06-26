@@ -1,7 +1,7 @@
 package com.company;
 
 public abstract class Product {
-    String name;
+    public String name;
 
     public Product(String name) {
     }

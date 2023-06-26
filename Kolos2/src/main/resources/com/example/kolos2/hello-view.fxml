@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kolos2.HelloController">
+    <Slider fx:id="slider" min="1" max="15" value="1" showTickMarks="true" showTickLabels="true" snapToTicks="true" majorTickUnit="2" minorTickCount="0" />
+    <Label fx:id="label"  />
+</VBox>
