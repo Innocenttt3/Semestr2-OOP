@@ -82,10 +82,4 @@ public class Server {
                 .collect(Collectors.joining(" "));
         sender.send("ON" + listString);
     }
-
-    public static void main(String[] args) {
-        Server server;
-        server = new Server(21155);
-        server.listen();
-    }
 }
