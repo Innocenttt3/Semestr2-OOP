@@ -75,11 +75,15 @@ public class CustomList<T> extends AbstractList<T> {
     public Iterator<T> iterator() {
         return new Iterator<T>() {
             Node tmpNode = head;
+
             @Override
             public boolean hasNext() {
-                if(tmpNode == null) {return false;}
+                if (tmpNode == null) {
+                    return false;
+                }
                 return tmpNode.nextOne != null;
             }
+
             @Override
             public T next() {
                 T previous = head.data;
