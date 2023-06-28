@@ -90,87 +90,87 @@
       <change beforePath="$PROJECT_DIR$/../lab8/target/test-classes/months.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab8/target/test-classes/testfoodproduct.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab8/target/test-classes/testowyplik.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lab8.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/buraki.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/cebula.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/chleb_pszenno-zytni.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/cukier.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/filet_z_morszczuka.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/jablka.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/jaja.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/kasza_jeczmienna.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/kielbasa_wedzona.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/kurczeta_patroszone.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/maka_pszenna.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/marchew.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/maslo.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/mieso_wieprzowe_bez_kosci.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/mieso_wolowe_bez_kosci.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/mieso_wolowe_z_koscia.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/mleko.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/olej_rzepakowy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/poledwica_drobiowa.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/pomarancze.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/ser_twarogowy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/sok_jablkowy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/szynka_wieprzowa.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food/ziemniaki.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/benzyna.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/bielizna_poscielowa.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/bilet_do_kina.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/bilet_na_autobus.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/bilet_na_autobus_miejski.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/bilet_na_pociąg.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/chlodziarko-zamrazarka.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/ciepla_woda.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/doxycyclinum.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/energia_elektryczna.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/garnitur.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/gaz_ziemny.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/geriavit.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/ibuprofen.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/koszula_meska.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/mycie_samochodu.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/mydlo.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/odkurzacz.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/olej_napedowy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/pasta_do_zebow.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/polbuty_damskie.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/polbuty_dzieciece.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/polbuty_meskie.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/pralka.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/proszek_do_prania.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/przejazd_taksowka.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/spodnie.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/strzyzenie_wlosow_meskich.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/szampon.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/telewizor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/tkanina_sukienkowa.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/upranie_bielizny_posielowej.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/wizyta_u_lekarza_specjalisty.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/nonfood/znaczek_pocztowy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/AmbigiousProductException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Cart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/FoodProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/FoodProductExposed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/NonFoodProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/FoodProductTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/ProductTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/lab8.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testy-przyklad/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/buraki.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/cebula.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/chleb_pszenno-zytni.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/cukier.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/filet_z_morszczuka.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/jablka.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/jaja.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/kasza_jeczmienna.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/kielbasa_wedzona.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/kurczeta_patroszone.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/maka_pszenna.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/marchew.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/maslo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/mieso_wieprzowe_bez_kosci.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/mieso_wolowe_bez_kosci.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/mieso_wolowe_z_koscia.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/mleko.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/olej_rzepakowy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/poledwica_drobiowa.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/pomarancze.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/ser_twarogowy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/sok_jablkowy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/szynka_wieprzowa.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/food/ziemniaki.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/benzyna.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/bielizna_poscielowa.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/bilet_do_kina.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/bilet_na_autobus.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/bilet_na_autobus_miejski.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/bilet_na_pociąg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/chlodziarko-zamrazarka.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/ciepla_woda.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/doxycyclinum.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/energia_elektryczna.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/garnitur.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/gaz_ziemny.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/geriavit.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/ibuprofen.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/koszula_meska.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/mycie_samochodu.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/mydlo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/odkurzacz.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/olej_napedowy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/pasta_do_zebow.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/polbuty_damskie.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/polbuty_dzieciece.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/polbuty_meskie.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/pralka.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/proszek_do_prania.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/przejazd_taksowka.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/spodnie.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/strzyzenie_wlosow_meskich.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/szampon.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/telewizor.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/tkanina_sukienkowa.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/upranie_bielizny_posielowej.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/wizyta_u_lekarza_specjalisty.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/data/nonfood/znaczek_pocztowy.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/AmbigiousProductException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/FoodProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/FoodProductExposed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/NonFoodProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/src/main/java/com/company/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/test/com/company/FoodProductTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testy-przyklad/test/com/company/ProductTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +214,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "/Users/kamilgolawski/Nauka/Programowanie/Semestr2-OOP/testy-przyklad",
+    "last_opened_file_path": "/Users/kamilgolawski/Nauka/Programowanie/Semestr2-OOP/testy",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
